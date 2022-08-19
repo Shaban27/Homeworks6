@@ -35,21 +35,18 @@ public class Main {
 
         // задание 4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        reverseFullName[0] = ' ';
-        reverseFullName[1] = 'I';
-        reverseFullName[2] = 'v';
-        reverseFullName[3] = 'a';
-        reverseFullName[4] = 'n';
-        reverseFullName[5] = 'o';
-        reverseFullName[6] = 'v';
-        reverseFullName[7] = 'I';
-        reverseFullName[8] = 'v';
-        reverseFullName[9] = 'a';
-        reverseFullName[10] = 'n';
-        for (char string : reverseFullName) {
-            System.out.print(string);
-
+        char n = (char) reverseFullName.length;
+        char temp;
+        for (char i = 0; i < n/2; i++) {
+            temp = reverseFullName[n-i-1];
+            reverseFullName[n-i-1] = reverseFullName[i];
+            reverseFullName[i] = temp;
         }
+         for (char i=0; i<reverseFullName.length; i++){
+            System.out.print(reverseFullName[i]);
+        }
+
+
 
     }
 }
